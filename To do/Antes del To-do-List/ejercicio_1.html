@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de compras</h1>
+    <button id="insertar">Insertar</button>
+    <button id="eliminar">Eliminar articulo</button>
+
+    <script>
+        let lista = [];
+        document.querySelector("#insertar").addEventListener("click", function() {
+            let ingArticulo = prompt("Ingresa nombre del articulo (Escriba salir para no poner mas datos)")
+            while (ingArticulo.toLocaleLowerCase() !== "salir") {
+                lista.push(ingArticulo.toLocaleLowerCase());
+                ingArticulo = prompt("Ingresa nombre del articulo (Escriba salir para no poner mas datos)")
+            }
+            for (let articulo of lista) {
+                console.log(articulo)
+            }
+        })
+
+        document.querySelector("#eliminar").addEventListener("click", function() {
+            valorPromt = prompt("Articulo a eliminar")
+            const buscar = lista.indexOf(valorPromt.toLocaleLowerCase())
+            lista.splice(buscar, 1)
+            for (let articulo of lista) {
+                console.log(articulo)
+            }
+        })
+    </script>
+</body>
+</html>

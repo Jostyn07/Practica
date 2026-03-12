@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="numero">Ingresa numeros</label>
+    <input type="number" id="numero">
+    <button type="button" id="subirNumero">Subir numero</button>
+    <button type="button" id="sacarPromedio">Sacar promedio</button>
+
+    <script>
+        let numeros = [];
+        let suma = 0;
+
+        document.getElementById("subirNumero").addEventListener("click", function() {
+            let numero = document.getElementById("numero").value
+            numeros.push(numero)
+        })
+
+        document.getElementById("sacarPromedio").addEventListener("click", function() {
+            for (let i = 0; i < numeros.length; i++) {
+                suma += parseFloat(numeros[i])
+            }
+            let promedio = suma / numeros.length
+            console.log(promedio)
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckList</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container_general {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            margin-top: 0px;
+            padding-top: 0px;
+            box-sizing: border-box;
+        }
+
+        .containt_header {
+            border-bottom: 1px solid #333;
+            margin: 0 0 0 5px;
+            box-sizing: border-box;
+        }
+
+        .containt_header h1 {
+            padding: 20px 0 0 0;
+            margin: 0;
+        }
+
+        .containt_body {
+            display: flex;
+            margin: 10px;
+            justify-content: space-between;
+            padding: 10px;
+            flex-direction: column;
+        }
+
+        .activity {
+            width: 90%;
+            border: none;
+            border-bottom: 1px solid #333;
+        }
+
+        .activity:focus {
+            outline: none;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container_general">
+        <div class="containt_header">
+            <h1>To-do List</h1>
+        </div>
+
+        <div class="containt_body">
+            <div class="separacion1">
+                <input type="text" name="activity" id="activity" class="activity" placeholder="Escribe la actividad">
+                <button id="btnIngresarActividad">Ingresar actividad</button>
+            </div>
+
+            <ul id="agregarActividad">
+            </ul>
+        </div>
+
+        <div class="containt_footer"></div>
+    </div>
+
+    <script>
+        document.querySelector("#btnIngresarActividad").addEventListener("click", function () {
+
+            // Reutilizable
+            let actividad = document.querySelector("#activity").value
+            let espacio = document.querySelector("#agregarActividad")
+
+            // crear li
+            const li = document.createElement("li")
+            li.classList = "flex checkbox"
+            const label = document.createElement("label")
+            label.textContent = actividad
+
+            // crear checkbox
+            const checkbox1 = document.createElement("input")
+            checkbox1.type = "checkbox"
+
+            espacio.appendChild(li)
+            li.appendChild(checkbox1)
+            li.appendChild(label)
+
+            document.querySelector("#activity").value = ""
+        })
+    </script>
+</body>
+</html>

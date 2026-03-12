@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <h2>To do list inicial</h2>
+    <div class="container"></div>
+    <input type="text">
+
+    <script>
+        let tareas = [
+            {texto: "Aprender arrays", completada: false},
+            {texto: "Entender objetos", completada: true},
+            {texto: "Crear To do List", completada: false}
+        ]
+
+        function renderizar() {
+            const div = document.querySelector(".container")
+            div.innerHTML=""
+
+            for (let tarea of tareas) {
+                const li = document.createElement("li");
+                const input = document.createElement("input")
+                input.type="checkbox"
+                li.textContent = tarea.texto
+                div.appendChild(input)
+                div.appendChild(li)
+            }
+        }
+        
+
+
+        window.addEventListener("DOMContentLoaded", renderizar)
+    </script>
+</body>
+</html>

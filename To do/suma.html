@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="sumar">Sumar</button>
+
+    <script>
+        let numeros = [];
+        document.getElementById("sumar").addEventListener("click", function() {
+            let dato = prompt("Ingresar numero")
+            while (!isNaN(dato)) {
+                numeros.push(Number(dato))
+                dato = prompt("Ingresar otro numero")
+            }
+            
+            let suma = 0 
+            for (i = 0; i<numeros.length; i++) {
+                suma += numeros[i]
+            }
+            alert(suma)
+        })
+    </script>
+</body>
+</html>

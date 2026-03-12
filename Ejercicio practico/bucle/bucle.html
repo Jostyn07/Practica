@@ -1,0 +1,30 @@
+<!-- Ejercicio 10 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dato = 0
+        let i = 0
+        let intentos = 2
+        do {
+            dato = prompt("Ingresa el pin")
+            i++
+            if (dato !== "1234") {
+                if (intentos !== 0) {
+                alert("Pin incorrecto te quedan " + `${intentos--}` + " intentos")
+                } else {
+                    alert("Tarjeta bloqueada")
+                }
+            } else {
+                alert("Pin correcto")
+                break
+            }
+        } while (i < 3)
+    </script>
+</body>
+</html>

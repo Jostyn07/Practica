@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Informacion de usuario</h1>
+        <label for="name">Nombre</label>
+        <input type="text" id="name">
+        <label for="age">Edad</label>
+        <input type="text" id="age">
+        <label for="active">Activo?</label>
+        <input type="checkbox" id="active">
+    </div>
+    <button class="actualizar" id="actualizar">Actualizar</button>
+
+    <script>
+        let usuario = {
+            name: 'Jostyn',
+            age: 23,
+            activo: false
+        }
+        const checkbox = document.getElementById("active")
+
+        document.getElementById("actualizar").addEventListener("click", function() {
+            usuario.name = document.getElementById("name").value;
+            usuario.age = Number(document.getElementById("age").value);
+
+            renderizar()
+        })
+
+        // Cuando cuambia el checked se actualiza en pantalla
+        document.getElementById("active").addEventListener("change", function() {
+            
+            if (checkbox.checked) {
+                usuario.activo = true
+            } else {
+                usuario.activo = false
+            }
+            renderizar()
+        })
+
+        // Hace que se muestre en pantalla
+        function renderizar() {
+            var ageActual = usuario.age
+            if (usuario.activo == true) {
+                ageActual = usuario.age + 1
+            } else {
+                ageActual
+            }
+            
+            document.getElementById("name").value = usuario.name;
+            document.getElementById("age").value = ageActual;
+
+            checkbox.checked = usuario.activo
+        }
+
+        window.addEventListener("DOMContentLoaded", renderizar)
+    </script>
+</body>
+</html>
