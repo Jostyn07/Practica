@@ -1,0 +1,56 @@
+Unidades CSS
+css/* Absolutas */
+px    → píxeles (fijos, no escalan)
+
+/* Relativas (recomendadas) */
+rem   → relativo al font-size del html (1rem = 16px por defecto)
+em    → relativo al font-size del padre
+%     → porcentaje del contenedor padre
+vh    → porcentaje de la altura de la ventana (100vh = toda la pantalla)
+vw    → porcentaje del ancho de la ventana
+css/* Buena práctica: */
+font-size: 1rem;        /* en vez de 16px */
+padding: 1.5rem;        /* en vez de 24px */
+max-width: 1200px;      /* anchos máximos sí en px */
+gap: 1rem;              /* espacios en rem */
+Pseudo-clases útiles
+css/* Hover: cuando el mouse pasa por encima */
+a:hover {
+    color: #FF6B35;
+}
+
+/* Focus: cuando un input está seleccionado */
+input:focus {
+    outline: 2px solid #7B2FF7;
+    border-color: #7B2FF7;
+}
+
+/* First-child y last-child */
+li:first-child { font-weight: bold; }
+li:last-child { border-bottom: none; }
+
+/* nth-child: patrones */
+tr:nth-child(even) { background: #f5f5f5; }  /* filas pares */
+```
+
+---
+
+### Resumen de lo nuevo
+```
+Grid:
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 20px
+  grid-template-areas para layouts complejos
+
+Media queries:
+  @media (min-width: 768px) { }
+  Mobile first: empiezas móvil, agregas desktop
+  Breakpoints: 480, 768, 1024, 1280
+
+Propiedades:
+  display: block para labels/inputs en columna
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+  flex: 1 para empujar footer abajo
+  rem en vez de px para texto y espacios
+  :hover, :focus para interactividad

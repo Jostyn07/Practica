@@ -1,0 +1,22 @@
+/* Movil: menu vertical */
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px;
+}
+
+/* Tablet u otros: menu horizontar */
+@media (min-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+    }
+}

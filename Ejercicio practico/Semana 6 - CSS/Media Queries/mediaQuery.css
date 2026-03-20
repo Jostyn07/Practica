@@ -1,0 +1,44 @@
+/* Una media query dice "si la pantalla cumple esta condición, aplica estos estilos." */
+/* Estilos base: aplican siempre */
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Si la pantalla es mayor a 768px: cambia a fila */
+@media (min-width: 768px) {
+    .nav {
+        flex-direction: row;
+    }
+}
+
+/* =================== Mobile first vs Desktop first ============================== */
+/* MOBILE FIRST (recomendado): empiezas con móvil, agregas para pantallas grandes */
+.cards {flex-direction: column;}
+
+@media (min-width: 768px) {
+    .cards { flex-direction: row;}
+}
+
+/* DESKTOP FIRST: empiezas con desktop, adaptas para móvil */
+.cards {flex-direction: row;}
+
+@media (max-width: 768px) {
+    .cards {flex-direction: column;}
+}
+
+/* Mobile first es mejor porque hay más usuarios móviles que de desktop. */
+
+/* =========================== Breakpoints comunes =================================== */
+
+/* Móvil pequeño */
+@media (min-width: 480px) { }
+
+/* Tablet */
+@media (min-width: 768px) { }
+
+/* Desktop */
+@media (min-width: 1024px) { }
+
+/* Desktop grande */
+@media (min-width: 1280px) { }

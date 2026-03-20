@@ -1,0 +1,11 @@
+/* block: ocupa todo el ancho, empieza en nueva línea
+display: block;
+
+inline: solo ocupa su contenido, sigue en la misma línea
+display: inline;
+
+inline-block: como inline pero acepta width/height
+display: inline-block;
+
+none: desaparece completamente
+display: none; */

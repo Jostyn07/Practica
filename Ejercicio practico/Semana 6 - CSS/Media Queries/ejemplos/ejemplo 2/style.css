@@ -1,0 +1,30 @@
+/* Movil: 1 Columna */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+    width: 100vw;
+    height: 50vh;
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1200px;
+        margin: 0 auto
+    }
+}
+
+.card {
+    width: 99%;
+    height: 99%;
+    background-color: blue;
+}

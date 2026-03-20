@@ -1,0 +1,150 @@
+html, body {
+    background: #000;
+    border: 0px;
+    margin: 0;
+    padding: 4px;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background-image: url(../img/4k-black-hole-minimalistic-wallpaper.png);
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    margin: 20px 0px;
+    box-sizing: border-box;
+    width: 90vw;
+    height:min-content;
+    border-radius: 10px;
+    background-color: #fcd1;
+}
+
+/* Header */
+header h1 {
+    font-size: 100%;
+}
+
+.logo {
+    height: 10%;
+    width: 10%;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav a{
+    display: flex;
+    text-decoration: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+}
+
+/* ========================== MAIN ========================== */
+main {
+    margin: 0;
+    box-sizing: border-box;
+}
+#nosotros, #contacto {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Inicio */
+#inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+    height: 80vh;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fcd6;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.texto h2 {
+    text-align: center;
+}
+#inicio h2 {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  margin: 0;
+}
+
+#inicio p {
+    margin: 0 0 20px 0px;
+}
+
+.form {
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    background-position: right;
+    transition: 0.3s;
+}
+
+.form:hover {
+    background: #ff758f;
+    box-shadow: 0 0 15px #333;
+    transform: translateY(-1px);
+}
+
+/* ============ Servicios ======================== */
+
+.servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .servicios {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: #ffccd5;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+    color: #000;
+}
+
+.card:hover {
+    background: #fefae0;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 10px;
+    }
+}

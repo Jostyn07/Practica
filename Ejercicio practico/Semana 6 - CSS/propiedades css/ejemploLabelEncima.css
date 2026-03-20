@@ -1,0 +1,14 @@
+label {
+    display: block;          /* cada label en su propia línea */
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    display: block;          /* cada input en su propia línea */
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
