@@ -1,0 +1,10 @@
+### Ejercicio práctico
+
+**Parte 1 — Operaciones manuales (sin código):**
+```
+A) [3, 7] + [2, -3] = [5,4]
+B) [10, 5] - [4, 8] = [6,-3]
+C) 3 × [2, -1, 4] = [6,-3,12]
+D) Magnitud de [5, 12] = [25,144] -> [169] -> 13
+E) [1, 2] · [3, 4] = 11
+

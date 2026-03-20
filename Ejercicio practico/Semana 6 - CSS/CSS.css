@@ -1,0 +1,69 @@
+/* Parte 1 — Conceptos
+1. ¿Cuáles son las 3 formas de aplicar CSS a un HTML?
+    1) <style>...</style>
+    2) link
+    3) No la se
+2. ¿Qué es la especificidad? ¿Quién gana: un id, una clase o una etiqueta?
+    la especificidad se puede decir que es la importancia, y gana el id
+3. ¿Qué es el box model? Nombra sus 4 capas.
+    Creeria que es lo que compone sea a la pagina o la etiqueta
+    margin, padding, border, interno
+4. ¿Qué hace box-sizing: border-box?
+    Mantiene todo dentro de la pantalla
+5. ¿Cuál es la diferencia entre margin y padding?
+    margin se de el espacio por fuera y padding se da el espacio por dentro
+Parte 2 — Selectores
+Escribe el selector CSS para:
+6. Todos los párrafos
+*
+7. Un elemento con clase "card"
+.card
+8. Un elemento con id "header"
+#header
+9. Todos los links dentro de un nav
+nav a
+10. El primer hijo de una lista
+ni idea
+Parte 3 — Flexbox
+11. ¿Qué hace display: flex?
+    le dice que este objeto o etiqueta sera un flex?
+12. ¿Cómo centras un elemento horizontal y verticalmente con Flexbox?
+    depende de como este el flex-direction, si esta en column, centrar vericalmente es aling-items y horizontalmente es justify-content, por lo que si esta en fila, seria lo contrario
+13. ¿Qué diferencia hay entre justify-content y align-items?
+    El vertical y horizontal?
+14. ¿Qué hace flex-wrap: wrap?
+    No permite que se desborde y manda hacia abajo
+15. Escribe CSS para que 3 cards queden en fila con espacio entre ellas
+    display: flex
+    justify-content: space-between
+Parte 4 — Grid
+16. ¿Has usado CSS Grid? Si sí, ¿qué hace grid-template-columns?
+17. Escribe CSS para una grilla de 3 columnas iguales
+Parte 5 — Responsivo
+18. ¿Qué es una media query?
+19. Escribe una media query que aplique estilos cuando la pantalla sea menor a 768px
+20. ¿Qué hace la meta tag viewport que ya usas en tu HTML?
+Parte 6 — Código práctico
+21. Escribe CSS para:
+    - Un header con fondo oscuro, texto blanco, contenido centrado
+        header {
+            background: #000;
+            color: #fff;
+            text-aling: center;
+        }
+    - Cards con borde redondeado, sombra y padding
+        .cards {
+            border-radius: 8 px;
+            box-shadow: 0,0,8px,#333
+            padding: 3px
+        }
+    - Un formulario donde los labels estén encima de los inputs
+        label {
+            z-index: 10px
+        }    
+    - Un footer pegado al fondo de la página 
+        footer {
+            display: flex;
+            aling-item: end;
+        }
+    */
