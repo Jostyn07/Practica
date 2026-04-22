@@ -26,6 +26,38 @@ class NotificacionSMS extends Notificacion {
     }
 }
 
+class NotificacionWhatsapp extends Notificacion {
+    constructor (destinatario, mensaje, nombreContacto) {
+        super(destinatario, mensaje)
+        this.nombreContacto = nombreContacto
+    }
+
+    enviar() {
+        if (this.nombreContacto) {
+            return `Enviando Whatsapp a ${this.nombreContacto} (${this.destinatario}): ${this.mensaje}`
+        } else {
+            return `Enviando Whatsapp a ${this.destinatario}: ${this.mensaje}`
+        }
+    }    
+}
+
+class GestorNotificaciones {
+    constructor () {
+        this.notificaciones = []
+    }
+    agregarNotificacion(notificacion) {
+        this.notificaciones.push(notificacion)
+    }
+
+    enviarTodas() {
+        return this.notificaciones.forEach(n => console.log(n.enviar()))
+    }
+
+    filtrarPorTipo(tipo) {
+        return this.notificaciones.filter(n => n.constructor.name === tipo)
+    }
+}
+
 // Crea una clase abstracta "Notificacion" con:
 //   - constructor: destinatario, mensaje
 //   - método enviar() → lanza error "Debes implementar enviar()"
@@ -41,3 +73,11 @@ let notis = [
 ]
 
 notis.forEach(n => console.log(n.enviar()))
+
+let gestor = new GestorNotificaciones()
+gestor.agregarNotificacion(new NotificacionEmail("ana@mail.com", "Póliza aprobada"))
+gestor.agregarNotificacion(new NotificacionSMS("+573001234567", "Póliza aprobada"))
+gestor.agregarNotificacion(new NotificacionWhatsapp("+573007654321", "Póliza aprobada", "Carlos"))
+
+gestor.enviarTodas()
+console.log(gestor.filtrarPorTipo("NotificacionEmail"))
