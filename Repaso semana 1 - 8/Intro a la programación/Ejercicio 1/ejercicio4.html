@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es mayor de edad?</title>
+</head>
+<body>
+    <label for="">Ingresa tu edad para verificar si eres mayor de edad</label>
+    <button onclick="esMayor()">Ingresar edad</button>
+    <p id="esMayorDeEdad"></p>
+
+    <script>
+        function esMayor() {
+            let edad = prompt('Ingresa tu edad')
+
+            if (edad >= 18) {
+                document.getElementById('esMayorDeEdad').innerHTML = `tiene ${edad} es mayor de edad`
+            } else {
+                document.getElementById('esMayorDeEdad').innerHTML = `tiene ${edad} es menor de edad`
+            }
+        }
+    </script>
+</body>
+</html>

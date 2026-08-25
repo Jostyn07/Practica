@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular promedio</title>
+</head>
+<body>
+    <h1>Calcular promedio</h1>
+    <input type="number" placeholder="Nota 1" id="nota1">
+    <input type="number" placeholder="Nota 2" id="nota2">
+    <input type="number" placeholder="Nota 3" id="nota3">
+
+    <button onclick="calcularPromedio()">Calcular promedio</button>
+    <p id="resultado"></p>
+    <script>
+        let suma = ""
+        function calcularSuma() {
+            let nota1 = parseFloat(document.getElementById('nota1').value)
+            let nota2 = parseFloat(document.getElementById('nota2').value)
+            let nota3 = parseFloat(document.getElementById('nota3').value)
+
+            return suma = nota1 + nota2 + nota3
+        }
+
+        function calcularPromedio() {
+            calcularSuma()
+            console.log(suma)
+            let promedio = (suma/3)
+            document.getElementById('resultado').innerHTML = `El promedio es de: ${promedio}`
+        }
+    </script>
+</body>
+</html>

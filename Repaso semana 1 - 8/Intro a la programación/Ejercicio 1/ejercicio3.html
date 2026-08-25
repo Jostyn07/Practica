@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par o impar</title>
+</head>
+<body>
+    <label for="">Dame un numero para saber si es par o impar</label>
+    <button onclick="esParOImpar()">Dar un numero</button>
+    <p id="parOImpar"></p>
+    <script>
+        
+        function esParOImpar() {
+            numero = prompt('Dame un numero')
+            let residuo = numero%2
+            console.log(residuo)
+            if (residuo == 1) {
+                document.getElementById('parOImpar').innerHTML = numero + ' es un numero impar'
+            } else {
+                document.getElementById('parOImpar').innerHTML = numero + ' es un numero par'
+            }
+        }
+    </script>
+</body>
+</html>
