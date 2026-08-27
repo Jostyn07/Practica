@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificar numero</title>
+</head>
+<body>
+    <h1>Indicar si es positivo, negativo o cero</h1>
+    <input type="number" id="numero">
+    <button onclick="verificarNumero()">Ingresar numero</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarNumero() {
+            let numero = parseFloat(document.getElementById('numero').value)
+            console.log(numero+numero)
+            console.log(typeof numero)
+            
+            if (numero > 0) {
+                document.getElementById('resultado').innerHTML = `${numero} es positivo`
+            } else if (numero === 0 ) {
+                document.getElementById('resultado').innerHTML = `${numero} es cero`
+            } else {
+                document.getElementById('resultado').innerHTML = `${numero} es negativo`
+            }
+                
+        }
+    </script>
+</body>
+</html>

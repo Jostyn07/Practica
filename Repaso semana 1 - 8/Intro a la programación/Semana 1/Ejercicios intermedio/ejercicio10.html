@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <h1>Calcula el factorial de un número N usando un bucle (sin recursividad).</h1>
+    <input type="number" id="numero" placeholder="ingresa un numero">
+    <button id="factorial">Hacer factorial</button>
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById('factorial').addEventListener('click', function () {
+            let numero = parseInt(document.getElementById('numero').value)
+            let suma = 0
+            let parrafo = document.createElement('p');
+            document.getElementById("resultado").innerHTML = ''
+            
+            for (i = 0; i <= numero; i++) {
+                suma += i
+                if (i === 0) {
+                    parrafo.textContent += `${i}`
+                } else if (i === numero) {
+                    parrafo.textContent += ` + ${i} = ${suma}`
+                } else {
+                    parrafo.textContent += ` + ${i}`
+                }
+                
+            }
+            document.getElementById("resultado").appendChild(parrafo)
+        })
+    </script>
+</body>
+</html>

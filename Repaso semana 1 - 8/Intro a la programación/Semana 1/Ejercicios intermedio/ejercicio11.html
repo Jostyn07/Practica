@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El numero mayor</title>
+</head>
+<body>
+    <h1>Encuentra el mayor de 3 números sin usar una función max() incorporada</h1>
+    <input type="text" id="numero1" placeholder="Ingresa un numero">
+    <input type="text" id="numero2" placeholder="Ingresa un numero">
+    <input type="text" id="numero3" placeholder="Ingresa un numero">
+
+    <button id="verificarMayor">Verificar cual es el mayor</button>
+    <p id="resultado"></p>
+
+    <script>
+        document.getElementById('verificarMayor').addEventListener('click', function () {
+            let numero1 = parseFloat(document.getElementById('numero1').value);
+            let numero2 = parseFloat(document.getElementById('numero2').value);
+            let numero3 = parseFloat(document.getElementById('numero3').value);
+
+            if (numero1 > numero2 && numero1 > numero3) {
+                document.getElementById('resultado').innerHTML = `${numero1} es mayor que ${numero2} y ${numero3}`
+            } else if (numero2 > numero1 && numero2 > numero3) {
+                document.getElementById('resultado').innerHTML = `${numero2} es mayor que ${numero1} y ${numero3}`
+            } else if (numero3 > numero2 && numero3 > numero1) {
+                document.getElementById('resultado').innerHTML = `${numero3} es mayor que ${numero2} y ${numero1}`
+            } else {
+                document.getElementById('resultado').innerHTML = `Los numeros tres numeros son iguales`
+            }
+        })
+    </script>
+</body>
+</html>

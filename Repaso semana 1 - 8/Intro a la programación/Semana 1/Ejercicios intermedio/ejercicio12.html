@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="texto">
+    <button id="verificarVocales" onclick="verificarVocales()">Verificar Vocales</button>
+    <div id="resultado"></div>
+    <script>
+        let VOCALES = ['a', 'e', 'i', 'o', 'u']
+        function verificarVocales() {
+            let texto = document.getElementById('texto').value;
+            let cantidadVocales = 0
+
+            VOCALES.forEach(a => {
+                for (i = 0; i < texto.length; i++) {
+                    if (texto[i] === a) {
+                        cantidadVocales += 1
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de multiplicar</title>
+</head>
+<body>
+    <h1>Imprime la tabla de multiplicar de un número N.</h1>
+    <input type="number" id="numero" placeholder="ingresa un numero">
+    <button id="tabla">Generar tabla</button>
+    <div id="tablaResultado"></div>
+    <script>
+
+        document.getElementById('tabla').addEventListener('click', function () {
+            document.getElementById('tablaResultado').innerHTML = ''
+            let numero = document.getElementById('numero').value;
+            for (i = 0; i <= 10; i++) {
+                let parrafo = document.createElement('p');
+                parrafo.textContent = `${numero} x ${i} = ${numero*i}`
+                document.getElementById('tablaResultado').appendChild(parrafo);
+            }
+        })
+    </script>
+</body>
+</html>
