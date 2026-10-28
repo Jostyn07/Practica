@@ -7,6 +7,28 @@
 </head>
 <body>
     <h1>Genera la secuencia de Fibonacci hasta el término N, de forma iterativa.</h1>
-    <input type="number" id="">
+    <input type="number" id="numero" placeholder="ingresa un numero...">
+    <button id="generarFibonnaci">Generar fibonacci</button>
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById('generarFibonnaci').addEventListener('click', function () {
+            let numero = parseInt(document.getElementById('numero').value) 
+            let resultado = document.getElementById("resultado")
+            let parrafo = document.createElement('p').textContent
+            let valorSiguiente = 1
+            let valorAnterior = 0
+            for (let i = 0; i < (numero+1); i++) {
+                if (i == 0) console.log(valorAnterior)
+                if (i == 1) console.log(valorSiguiente)
+                if (i > 1) {
+                    console.log(valorAnterior + valorSiguiente)
+                    let siguiente = valorAnterior + valorSiguiente
+                    valorAnterior = valorSiguiente
+                    valorSiguiente = siguiente
+                }   
+            }
+        })
+    </script>
 </body>
 </html>
